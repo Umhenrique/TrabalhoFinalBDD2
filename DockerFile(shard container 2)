@@ -1,0 +1,13 @@
+# Use a imagem oficial do PostgreSQL
+FROM postgres:16.3
+
+# Configurações de ambiente
+ENV POSTGRES_USER newuser
+ENV POSTGRES_PASSWORD newpassword
+ENV POSTGRES_DB newdatabase
+
+# Exponha a porta padrão do PostgreSQL
+EXPOSE 5432
+
+# Comando para iniciar o PostgreSQL
+CMD ["postgres"]
